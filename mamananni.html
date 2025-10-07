@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyeux Anniversaire Maman 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f0, #fff6e6);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ff4081;
+      margin-top: 2rem;
+      text-shadow: 2px 2px 8px rgba(255, 105, 180, 0.3);
+      animation: fadeInDown 2s ease;
+    }
+
+    .message {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+      animation: fadeIn 3s ease;
+    }
+
+    .signature {
+      margin-top: 2rem;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #ff4081;
+      text-shadow: 1px 1px 4px rgba(255,105,180,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .balloons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background-color: pink;
+      border-radius: 50%;
+      animation: float 8s infinite ease-in;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-500px) rotate(10deg); }
+      100% { transform: translateY(-1000px) rotate(-10deg); }
+    }
+
+    audio {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .message { font-size: 1rem; margin: 1rem; padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Joyeux Anniversaire Maman 💐</h1>
+
+  <div class="message">
+    <p>
+      Maman… Aujourd’hui, c’est ton jour. Le jour où le monde a reçu un trésor, une femme d’une force, d’une douceur et d’une lumière infinie. 
+      Je prends un instant, entre deux battements de cœur, pour te dire à quel point tu comptes pour moi.  
+    </p>
+
+    <p>
+      Depuis le tout début, tu es celle qui m’a appris à marcher, à parler, à rêver. Celle qui a essuyé mes larmes quand tout allait mal, 
+      celle qui m’a poussé à me relever, encore et encore.  
+      Derrière chacun de mes sourires, il y a un peu de ton amour, de ta patience, et de tes sacrifices silencieux.
+    </p>
+
+    <p>
+      Je me rends compte chaque jour à quel point j’ai de la chance d’avoir une mère comme toi. 
+      Tu n’as jamais cessé de donner, même quand tu n’avais presque rien.  
+      Tu m’as tout appris sans même parler : la bonté, la générosité, la foi, la dignité, la force.  
+      Ton amour est la boussole qui me guide, le refuge où je trouve la paix quand le monde devient trop lourd.
+    </p>
+
+    <p>
+      Maman, tu es mon premier amour, mon exemple, mon repère.  
+      Si aujourd’hui je poursuis mes rêves, c’est parce que tu as cru en moi bien avant que je croie en moi-même.  
+      Tu es la reine de mon cœur, la lumière qui ne s’éteint jamais.  
+      Même à des kilomètres, je ressens ton amour comme un soleil qui réchauffe mes journées.
+    </p>
+
+    <p>
+      En ce jour si spécial, je veux simplement te dire merci.  
+      Merci pour tout ce que tu as fait, pour tout ce que tu continues de faire, et pour tout ce que tu es.  
+      Que cette journée te remplisse de bonheur, que ton cœur soit aussi léger qu’un pétale de rose,  
+      et que la vie t’offre en retour tout l’amour que tu as semé.
+    </p>
+
+    <p>
+      Joyeux anniversaire, maman.  
+      Que ton sourire illumine encore longtemps ma vie.  
+      Tu es, et tu resteras, mon plus grand miracle.
+    </p>
+
+    <div class="signature">
+      💖 Ton fils qui t’aime profondément,<br>
+      <strong>Cheikh</strong>
+    </div>
+  </div>
+
+  <div class="balloons">
+    <div class="balloon" style="left:10%; background-color:#ffb6c1; animation-delay:0s;"></div>
+    <div class="balloon" style="left:30%; background-color:#ff80ab; animation-delay:2s;"></div>
+    <div class="balloon" style="left:50%; background-color:#ffcccb; animation-delay:4s;"></div>
+    <div class="balloon" style="left:70%; background-color:#f48fb1; animation-delay:1s;"></div>
+    <div class="balloon" style="left:90%; background-color:#ffc1e3; animation-delay:3s;"></div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8fbe6ce54d.mp3?filename=soft-piano-music-14304.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Confettis doux
+    const createConfetti = () => {
+      const confetti = document.createElement('div');
+      confetti.innerText = '✨';
+      confetti.style.position = 'absolute';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = '-10px';
+      confetti.style.fontSize = Math.random() * 20 + 10 + 'px';
+      confetti.style.opacity = 0.7;
+      confetti.style.animation = 'fall 5s linear infinite';
+      document.body.appendChild(confetti);
+
+      setTimeout(() => confetti.remove(), 5000);
+    }
+
+    setInterval(createConfetti, 300);
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes fall {
+        to {
+          transform: translateY(110vh);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+
+</body>
+</html>
+
